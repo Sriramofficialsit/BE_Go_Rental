@@ -7,7 +7,7 @@ const { Dashboard } = require("./controllers/Dashboard.controller");
 
 const go_rental = Express();
 go_rental.use("/images", Express.static("images"));
-go_rental.use(cors({ origin: "http://localhost:5173", credentials: true }));
+go_rental.use(cors());
 go_rental.use(Express.json());
 go_rental.use("/auth", Auth);
 go_rental.use("/dashboard", Dashboard);
